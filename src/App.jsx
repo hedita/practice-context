@@ -1,8 +1,8 @@
 import ReactDOM from "react-dom/client";
-import SearchInput from "./SearchInput";
+import Sports from "./Components/Sports";
 
 const App = () => {
-    return <SearchInput />
+  return <Sports />
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
