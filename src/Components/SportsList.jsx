@@ -1,9 +1,9 @@
 import { useEffect, useState, useContext } from "react";
-// import { SportsContext } from "./SportsContext";
+import { SportsContext } from "./SportsContext";
 
 function SportsList () {
   const [data, setData] = useState([]);
-  // const {searchKeyword} = useContext(SportsContext);
+  const {searchKeyword} = useContext(SportsContext);
 
   // console.log(searchKeyword)
 

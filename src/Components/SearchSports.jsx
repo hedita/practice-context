@@ -1,9 +1,9 @@
-// import React, { useContext } from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
-// import { SportsContext } from "./SportsContext";
+import { SportsContext } from "./SportsContext";
 
 function SearchSports () {
-  // const [searchKeyword, setSearchKeyword] = useContext(SportsContext);
+  const [searchKeyword, setSearchKeyword] = useState(SportsContext);
 
   return (
     <input 
