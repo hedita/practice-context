@@ -2,11 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { SportsContext } from "./SportsContext";
 
 function SportsList () {
-  const [data, setData] = useState([]);
-  const {searchKeyword} = useContext(SportsContext);
-
-  // console.log(searchKeyword)
-
+  const {sports, setSports} = useContext(SportsContext);
   
   useEffect(() => {
     requestSportsList();
@@ -15,12 +11,12 @@ function SportsList () {
   async function requestSportsList() {
     const result = await fetch(`https://raw.githubusercontent.com/dariusk/corpora/master/data/sports/sports.json`);
     const {sports} = await result.json();
-    setData(sports)
+    setSports(sports)
   }
 
   return (
     <ul>
-      {data.map((sport, id) => (
+      {sports.map((sport, id) => (
         <li key={id}>{sport}</li>
       ))}
     </ul>

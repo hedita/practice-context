@@ -4,10 +4,10 @@ import { useState } from "react";
 import { SportsContext } from "./SportsContext";
 
 function Sports () {
-  const [searchKeyword, SetSearchKeyword] = useState([]);
+  const [sports, setSports] = useState([]);
 
   return (
-    <SportsContext.Provider value={{ searchKeyword, SetSearchKeyword }}>
+    <SportsContext.Provider value={{ sports, setSports }}>
       <SearchSports />
       <SportsList />
     </SportsContext.Provider>
