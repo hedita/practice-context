@@ -1,16 +1,16 @@
 import SportsList from "./SportsList";
 import SearchSports from "./SearchSports";
 import { useState } from "react";
-import { SportsContext } from "./SportsContext";
+import { SearchKeywordContext } from "./SearchKeywordContext";
 
 function Sports () {
-  const [sports, setSports] = useState([]);
+  const [searchKeyword, setSearchKeyword] = useState("");
 
   return (
-    <SportsContext.Provider value={{ sports, setSports }}>
+    <SearchKeywordContext.Provider value={{ searchKeyword, setSearchKeyword }}>
       <SearchSports />
       <SportsList />
-    </SportsContext.Provider>
+    </SearchKeywordContext.Provider>
   )
 }
 

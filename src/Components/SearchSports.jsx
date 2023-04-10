@@ -1,29 +1,14 @@
 import { useContext } from "react";
-import { SportsContext } from "./SportsContext";
+import { SearchKeywordContext } from "./SearchKeywordContext";
 
 function SearchSports () {
-  const { sports, setSports } = useContext(SportsContext);
-
-  const filter = (e) => {
-    const keyword = e.target.value;
-
-    if (keyword == "") {
-      setSports(sports);
-    } else {
-      const results = sports.filter((sport) => {
-        return (
-          sport.toLowerCase().startsWith(keyword.toLowerCase())
-        );
-      });
-      setSports(results);
-    }
-  };
+  const { searchKeyword, setSearchKeyword } = useContext(SearchKeywordContext);
 
   return (
     <input 
     type="search"
     placeholder="Search Sports"
-    onChange={filter}
+    onChange={(e) => setSearchKeyword(e.target.value)}
     />
   )
 }

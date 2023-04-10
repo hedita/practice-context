@@ -1,8 +1,9 @@
 import { useEffect, useState, useContext } from "react";
-import { SportsContext } from "./SportsContext";
+import { SearchKeywordContext } from "./SearchKeywordContext";
 
 function SportsList () {
-  const {sports, setSports} = useContext(SportsContext);
+  const [data , setData] = useState([]);
+  const {searchKeyword, setSearchKeyword} = useContext(SearchKeywordContext);
   
   useEffect(() => {
     requestSportsList();
@@ -11,12 +12,24 @@ function SportsList () {
   async function requestSportsList() {
     const result = await fetch(`https://raw.githubusercontent.com/dariusk/corpora/master/data/sports/sports.json`);
     const {sports} = await result.json();
-    setSports(sports)
+    // setData(sports)
+
+      if (searchKeyword == "") {
+        setData(sports);
+      } else {
+        const results = sports.filter((sport) => {
+          return (
+            sport.toLowerCase().startsWith(searchKeyword.toLowerCase())
+          );
+        });
+        setData(results);
+      
+    };
   }
 
   return (
     <ul>
-      {sports.map((sport, id) => (
+      {data.map((sport, id) => (
         <li key={id}>{sport}</li>
       ))}
     </ul>
