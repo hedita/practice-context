@@ -14,8 +14,8 @@ function SportsList () {
     const {sports} = await result.json();
 
     if (searchKeyword == "") {
-      setData(sports);
-    } else {
+      setData(sports.slice(0, 20));
+    } else if (searchKeyword.length >= 3) {
       const results = sports.filter((sport) => {
         return (
           sport.toLowerCase().startsWith(searchKeyword.toLowerCase())
