@@ -1,5 +1,6 @@
 import { useEffect, useState, useContext } from "react";
 import { SearchKeywordContext } from "./SearchKeywordContext";
+import "./SportsList.scss"
 
 function SportsList () {
   const [data , setData] = useState([]);
@@ -28,7 +29,7 @@ function SportsList () {
   return (
     <ul>
       {data.map((sport, id) => (
-        <li key={id}>{sport}</li>
+        <li className="sports-item" key={id}>{sport}</li>
       ))}
     </ul>
   );

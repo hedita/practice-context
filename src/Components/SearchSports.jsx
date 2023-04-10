@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { SearchKeywordContext } from "./SearchKeywordContext";
+import "./SearchSports.scss";
 
 function SearchSports () {
   const { searchKeyword, setSearchKeyword } = useContext(SearchKeywordContext);
@@ -9,6 +10,7 @@ function SearchSports () {
     type="search"
     placeholder="Search Sports"
     onChange={(e) => setSearchKeyword(e.target.value)}
+    className="search-input"
     />
   )
 }
