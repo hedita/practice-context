@@ -12,18 +12,16 @@ function SportsList () {
   async function requestSportsList() {
     const result = await fetch(`https://raw.githubusercontent.com/dariusk/corpora/master/data/sports/sports.json`);
     const {sports} = await result.json();
-    // setData(sports)
 
-      if (searchKeyword == "") {
-        setData(sports);
-      } else {
-        const results = sports.filter((sport) => {
-          return (
-            sport.toLowerCase().startsWith(searchKeyword.toLowerCase())
-          );
-        });
-        setData(results);
-      
+    if (searchKeyword == "") {
+      setData(sports);
+    } else {
+      const results = sports.filter((sport) => {
+        return (
+          sport.toLowerCase().startsWith(searchKeyword.toLowerCase())
+        );
+      });
+      setData(results); 
     };
   }
 
