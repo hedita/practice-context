@@ -3,7 +3,7 @@ import { SearchKeywordContext } from "./SearchKeywordContext";
 
 function SportsList () {
   const [data , setData] = useState([]);
-  const {searchKeyword, setSearchKeyword} = useContext(SearchKeywordContext);
+  const {searchKeyword} = useContext(SearchKeywordContext);
   
   useEffect(() => {
     requestSportsList();
