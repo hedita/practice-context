@@ -8,7 +8,7 @@ function SportsList() {
 
   useEffect(() => {
     requestSportsList();
-  });
+  }, [searchKeyword]);
 
   async function requestSportsList() {
     const result = await fetch(
