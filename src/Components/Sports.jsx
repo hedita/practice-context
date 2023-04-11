@@ -3,7 +3,7 @@ import SportsList from "./SportsList";
 import SearchSports from "./SearchSports";
 import { SearchKeywordContext } from "../context/SearchKeywordContext";
 
-function Sports () {
+function Sports() {
   const [searchKeyword, setSearchKeyword] = useState("");
 
   return (
@@ -11,7 +11,7 @@ function Sports () {
       <SearchSports />
       <SportsList />
     </SearchKeywordContext.Provider>
-  )
+  );
 }
 
 export default Sports;
