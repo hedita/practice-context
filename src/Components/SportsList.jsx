@@ -1,6 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import { SearchKeywordContext } from "../context/SearchKeywordContext";
 import "./SportsList.scss";
+const url = "https://raw.githubusercontent.com/dariusk/corpora/master/data/sports/sports.json";
 
 function SportsList() {
   const [data, setData] = useState([]);
@@ -11,9 +12,7 @@ function SportsList() {
   }, [searchKeyword]);
 
   async function requestSportsList() {
-    const result = await fetch(
-      `https://raw.githubusercontent.com/dariusk/corpora/master/data/sports/sports.json`
-    );
+    const result = await fetch(`${url}`);
     const { sports } = await result.json();
 
     if (searchKeyword === "") {
