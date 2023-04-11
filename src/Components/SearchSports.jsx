@@ -3,7 +3,7 @@ import { SearchKeywordContext } from "../context/SearchKeywordContext";
 import "./SearchSports.scss";
 
 function SearchSports () {
-  const { searchKeyword, setSearchKeyword } = useContext(SearchKeywordContext);
+  const { setSearchKeyword } = useContext(SearchKeywordContext);
 
   return (
     <input 
