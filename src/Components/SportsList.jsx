@@ -19,7 +19,7 @@ function SportsList () {
     } else if (searchKeyword.length >= 3) {
       const results = sports.filter((sport) => {
         return (
-          sport.toLowerCase().startsWith(searchKeyword.toLowerCase())
+          sport.toLowerCase().includes(searchKeyword.toLowerCase())
         );
       });
       setData(results.slice(0, 20)); 
