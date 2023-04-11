@@ -14,7 +14,7 @@ function SportsList () {
     const result = await fetch(`https://raw.githubusercontent.com/dariusk/corpora/master/data/sports/sports.json`);
     const {sports} = await result.json();
 
-    if (searchKeyword == "") {
+    if (searchKeyword === "") {
       setData(sports.slice(0, 20));
     } else if (searchKeyword.length >= 3) {
       const results = sports.filter((sport) => {
