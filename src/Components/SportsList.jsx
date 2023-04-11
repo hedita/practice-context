@@ -22,7 +22,7 @@ function SportsList () {
           sport.toLowerCase().startsWith(searchKeyword.toLowerCase())
         );
       });
-      setData(results); 
+      setData(results.slice(0, 20)); 
     };
   }
 
