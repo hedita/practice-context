@@ -1,7 +1,7 @@
 import SportsList from "./SportsList";
 import SearchSports from "./SearchSports";
 import { useState } from "react";
-import { SearchKeywordContext } from "./SearchKeywordContext";
+import { SearchKeywordContext } from "../context/SearchKeywordContext";
 
 function Sports () {
   const [searchKeyword, setSearchKeyword] = useState("");

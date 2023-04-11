@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { SearchKeywordContext } from "./SearchKeywordContext";
+import { SearchKeywordContext } from "../context/SearchKeywordContext";
 import "./SearchSports.scss";
 
 function SearchSports () {
