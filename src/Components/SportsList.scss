@@ -1,0 +1,30 @@
+$primary-color: #3D5656;
+$secondary-color: #FED049;
+$tertiary-color: #CFFDE1;
+
+$sizing-xs: 2px;
+$sizing-s: 10px;
+$sizing-m: 15px;
+$sizing-l: 25px;
+$sizing-xl: 190px;
+
+
+body {
+  background-color: $primary-color;
+}
+
+ul {
+	list-style-type: none;
+	padding: $sizing-s;
+}
+
+.sports-item {
+	line-height: $sizing-l;
+	color: $secondary-color;
+	border: $sizing-xs solid $tertiary-color;
+	border-radius: $sizing-m;
+	padding: $sizing-s;
+	margin: $sizing-s;
+	max-width: $sizing-xl;
+	text-align: center;
+}

@@ -1,0 +1,11 @@
+$sizing-m: 15px;
+
+$primary-color: #3D5656;
+
+.search-input {
+  color: $primary-color;
+  border-radius: $sizing-m;
+  margin: $sizing-m;
+  padding: $sizing-m;
+  font-weight: bold;
+}
